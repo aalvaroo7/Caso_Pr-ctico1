@@ -1,4 +1,6 @@
 # Caso_Práctico1
+
+ 
 ## Ejercicio 1 
 
 Esquematizar la arquitectura lógica de la red utilizando los modelos OSI y TCP/IP.
@@ -65,3 +67,51 @@ Cámaras inteligentes, sensores de sala, asistentes de voz conectados vía MQTT 
 
  🔹 Seguridad avanzada:
 Autenticación multifactor (MFA) y control de accesos IAM.
+
+
+## Ejercicio 2
+
+# Capa Física: Cálculo de Tasa de Transmisión y Selección de Modulación
+
+Para diseñar correctamente la **capa física** en la red de videoconferencia, es necesario calcular la **tasa de transmisión máxima** usando la **fórmula de Shannon**, y seleccionar una modulación adecuada para enlaces **cableados e inalámbricos**.
+
+---
+
+## 1)Cálculo de la Tasa de Transmisión Máxima (Shannon)
+
+La **capacidad máxima del canal** según Shannon se calcula con la ecuación:
+
+ C = B * log_2(1 + SNR) 
+
+Donde:
+- **C** = Capacidad del canal en **bps** (bits por segundo).
+- **B** = Ancho de banda del canal en **Hz**.
+- **SNR** = Relación señal-ruido en **escala lineal** (no en dB).
+
+###  Cálculo
+
+Supongamos que tenemos:
+- **Ancho de banda (B):** 20 MHz (Wi-Fi)
+- **SNR en dB:** 30 dB (relación señal-ruido común en redes Wi-Fi)
+
+### 🔹 Conversión de SNR a escala lineal
+
+Para convertir SNR de dB a escala lineal:
+
+SNR_{lineal} = 10^{(SNR_{dB} / 10)} 
+
+ SNR_{lineal} = 10^{(30 / 10)} = 10^3 = 1000
+
+### 🔹 Aplicando la ecuación de Shannon
+
+ C = 20 \times 10^6 \times \log_2(1 + 1000) 
+
+ C \approx 20 \times 10^6 \times \log_2(1001)
+
+ C \approx 20 \times 10^6 \times 9.97 
+
+ C \approx 199.4 \text{ Mbps}
+
+###  Conclusión
+
+En un canal **Wi-Fi de 20 MHz** con **SNR = 30 dB**, la **tasa máxima teórica de transmisión** es aproximadamente **199.4 Mbps**. 
