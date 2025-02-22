@@ -1,6 +1,8 @@
 # Caso_Práctico1
-
 ## Ejercicio 1 
+
+Esquematizar la arquitectura lógica de la red utilizando los modelos OSI y TCP/IP.
+Incluir dispositivos de videoconferencia, servidores de aplicaciones y equipos de red.
 
 ### 1.Capa Física (OSI) / Acceso a la Red (TCP/IP)
 🔹 Infraestructura:
